@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  
+  --ff-header: 'Staatliches', cursive;
+  --ff-text: 'Palanquin', sans-serif;
+
+  --body-color:#090f13;
+
+  --fc-header-h1: #f2eab7;
+  --fc-header-p:white; 
+
+  --search-color:#171f25; 
+  --fc-body-h2:#c90a02; 
+  
+  
+  --color:#752e2b; 
+
+}
+ 
+
+body {
+  background: var(--body-color);
+  display:grid;
+}
+.app {
+  min-width: 72rem;
+
+}
+
+header {
+  display:grid;
+  margin-bottom:3rem;
+
+  
+}
+.info {
+  display: grid;
+  justify-items:center;
+}
+.search {
+  display: flex;
+  justify-content: space-around;
+}
+.input {
+  display: flex;
+
+}
+input {
+  min-width: 30rem;
+  height: 5em;
+  
+}
+main {
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+}
+svg {
+  min-width: 7rem;
+  height: 4.5em;
+}
+h1 {
+  font-size: 8rem;
+  color:var(--fc-header-h1)
+} 
+p {
+  font-size: 5rem;
+  color:var(--fc-header-p);
+  margin-bottom:3rem;
+}
+button:hover {
+  cursor: pointer;
+}
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: var(--search-color);
+
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+}
+.card {
+  position: relative;
+}
+.card span {
+  font-size: 3rem;
+
+  position: absolute;
+  top: 1.7rem;
+  left: 35rem;
+  border-radius: 2rem;
+  background-color: var(--fc-body-h2);
+  padding: 0 1.6rem;
+  height: 3.8rem;
+  letter-spacing: 1px;
+}
+.card img {
+  object-fit: cover; 
+}
+.card img {
+  width: 50rem;  
+  border-radius: 20px;
+}
+.card img:hover {
+  opacity: 80%;
+ transform: scale(1.1);
+ cursor:pointer; 
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+
+@media (min-width:1175px) {
+
+main {
+  grid-template-columns: 1fr 1fr;
+  justify-items: center
+}
+}
